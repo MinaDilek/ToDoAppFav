@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row mt-3">
+        <h3 class = "fw-bold">Todos</h3>
+    </div>
+</div>
+<ul *ngIf="loading===false;else loadinginfo" class="list-group mt-3">
+    <li class="list-group-item list-group-item-warning" *ngFor = "let todo of todos">
+        <a class = "list-group-item list-group-item-warning border-0" routerLink = "todosDetail/{{todo.id}}" > {{todo.title}} </a>
+    </li>
+</ul>
+
+<ng-template #loadinginfo>
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-dark" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+
+</ng-template>

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row mt-3">
+        <h3 class = "fw-bold">Users</h3>
+    </div>
+</div>
+<ul class="list-group mt-3" *ngIf="loading===false;else loadinginfo">
+    <li class="list-group-item list-group-item-primary" *ngFor = "let user of users">
+        <a class = "list-group-item list-group-item-primary border-0" routerLink = "/userTodos/{{user.id}}">{{user.username}} </a>
+    </li>
+</ul>
+
+<ng-template #loadinginfo>
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-dark" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+
+</ng-template>

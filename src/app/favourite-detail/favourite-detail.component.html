@@ -1,0 +1,12 @@
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+    aria-expanded="false">
+    Show Favorites
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <li *ngFor="let album of favourites">
+      <a class="dropdown-item"> {{album.title}}<button class="btn btn-primary btn-sm" (click)="removefav(album)">X
+        </button> </a>
+    </li>
+  </ul>
+</li>
